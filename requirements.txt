@@ -1,0 +1,38 @@
+# Core AI Framework
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+langgraph>=0.2.0
+
+# LLM Provider
+openai>=1.50.0
+
+# Search Tool
+tavily-python>=0.5.0
+
+# RSS Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+lxml>=5.1.0
+
+# Structured Output
+pydantic>=2.0.0
+
+# GitHub Integration
+gitpython>=3.1.40
+
+# HuggingFace (optional: image/video generation)
+huggingface_hub>=0.23.0
+Pillow>=10.0.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Utilities
+tenacity>=8.2.0
+loguru>=0.7.0
+PyYAML>=6.0.0
+
+# Development & Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

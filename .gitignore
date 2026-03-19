@@ -1,0 +1,27 @@
+# 環境變數（絕不 commit 金鑰）
+.env
+
+# Python 虛擬環境
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 暫存輸出（本地生成的文章）
+output/*.md
+output/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 測試覆蓋率
+.coverage
+htmlcov/
+.pytest_cache/

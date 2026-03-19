@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "skills": {
+    "article-writing": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "c6b3dc9b8503229a33d4adb30f5a29986c13639479d789881aa3d24dc1bbff6d"
+    },
+    "blip-2-vision-language": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "a7b354dbb673d10e264c41a031c03545cbe013410c88435be7246be5641f4e07"
+    },
+    "clip": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "426c780108f17f8fc8478cdc936366935b0785e6edd678697aa9a9b66194a3ca"
+    },
+    "data-scraper-agent": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "a0f83e7ab79e3de024aedf9350e05e7d7e00ef50fdf02e65cc90f3444ecc85e5"
+    },
+    "deep-research": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "computedHash": "0f11d17f968300db3ca6544edc7398234982f9006c3d02c45c73fca3e4706237"
+    },
+    "editor": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "computedHash": "fcb8aa2aacaded8a0f873fde081a7103d5dbbecadbc715faef407019ec9c6c0d"
+    },
+    "fine-tuning-openvla-oft": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "9600b6fa8395ead41f930295668990aadb96e5fb979de0f28d902c0523a9ca1b"
+    },
+    "fine-tuning-serving-openpi": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "843c0ae31aa54e371e198ed48e5ae97831ca86cfa28a9cc8bb04ad440f67b788"
+    },
+    "humanizer-zh-tw": {
+      "source": "kevintsai1202/Humanizer-zh-TW",
+      "sourceType": "github",
+      "computedHash": "087324560751728808001bf7b651eff6088b36a4c6234ac72d2d3febcb2839e1"
+    },
+    "llava": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "89391378b3cec71fca5ee48551ecc1acff0fbb017db128d1460438c69147c1a7"
+    },
+    "nemo-curator": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "b5a433cf2ee7fb24a21b7583bae20fedafa906b8f38af6259ff18fc3f276a0d0"
+    },
+    "ray-data": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "7fe868d9f3b12fb4602be9018d3264af1a4875cd660fa91880597d1a7a2f8c64"
+    },
+    "segment-anything-model": {
+      "source": "Orchestra-Research/AI-Research-SKILLs",
+      "sourceType": "github",
+      "computedHash": "dd6ab7284eb1c2c808812cf47d44d0b41af54df84c0728bc6a9c289c6c851ad9"
+    }
+  }
+}
