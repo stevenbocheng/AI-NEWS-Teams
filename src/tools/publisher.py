@@ -13,6 +13,7 @@ import json
 import os
 import shutil
 import stat
+import subprocess
 import tempfile
 from datetime import datetime
 from loguru import logger
@@ -161,10 +162,12 @@ def publisher_node(state: NewsState) -> NewsState:
                 cw.set_value("user", "name", "GitHub Actions Bot")
                 cw.set_value("user", "email", "actions@github.com")
                 cw.set_value("credential", "helper", "")
-            # 用 extraheader 傳遞 token（GitHub Actions 官方做法，避免 credential helper 攔截）
-            repo.git.config(
-                "http.https://github.com/.extraheader",
-                f"AUTHORIZATION: bearer {settings.GITHUB_TOKEN}"
+            # 用 subprocess 設定 extraheader（繞過 GitPython 的 credential helper 攔截）
+            subprocess.run(
+                ["git", "-C", tmp_dir, "config",
+                 "http.https://github.com/.extraheader",
+                 f"AUTHORIZATION: bearer {settings.GITHUB_TOKEN}"],
+                check=True, capture_output=True
             )
 
             # ── 重複發佈偵測 ──────────────────────────────
@@ -243,8 +246,13 @@ def publisher_node(state: NewsState) -> NewsState:
             repo.index.commit(commit_message)
 
             clean_url = f"https://github.com/{settings.GITHUB_REPO}.git"
-            with repo.git.custom_environment(GIT_TERMINAL_PROMPT="0"):
-                repo.git.push(clean_url, "HEAD:main")
+            push_env = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_ASKPASS": "echo"}
+            result = subprocess.run(
+                ["git", "-C", tmp_dir, "push", clean_url, "HEAD:main"],
+                env=push_env, capture_output=True, text=True
+            )
+            if result.returncode != 0:
+                raise Exception(f"git push failed: {result.stderr}")
             logger.success(f"文章已成功發佈：{filename}")
 
             # ── 寫入本地（供 npm run dev 開發預覽）──────────
