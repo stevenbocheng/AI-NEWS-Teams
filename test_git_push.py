@@ -9,7 +9,7 @@ import shutil
 import stat
 from datetime import datetime
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
+GITHUB_TOKEN = os.getenv("GH_TOKEN", "")
 GITHUB_REPO = os.getenv("GITHUB_REPO", "")
 
 if not GITHUB_TOKEN or not GITHUB_REPO:
