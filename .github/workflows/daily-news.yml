@@ -34,7 +34,7 @@ jobs:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ secrets.TARGET_REPO }}
-        run: python src/main.py
+        run: python test_git_push.py
 
       - name: Upload execution logs
         if: always()
