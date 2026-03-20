@@ -152,7 +152,7 @@ def publisher_node(state: NewsState) -> NewsState:
         # Clone 目標 repo（媒體路徑需要在 clone 後決定，再寫 Front Matter）
         tmp_dir = tempfile.mkdtemp()
         try:
-            repo_url = f"https://{settings.GITHUB_TOKEN}@github.com/{settings.GITHUB_REPO}.git"
+            repo_url = f"https://x-access-token:{settings.GITHUB_TOKEN}@github.com/{settings.GITHUB_REPO}.git"
             logger.info(f"正在 clone {settings.GITHUB_REPO}...")
             repo = git.Repo.clone_from(repo_url, tmp_dir)
 
