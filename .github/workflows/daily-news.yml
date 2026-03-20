@@ -32,9 +32,16 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          PUBLISH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPO: ${{ secrets.TARGET_REPO }}
-        run: python test_git_push.py
+          GITHUB_REPO: stevenbocheng/AI-NEWS-Teams
+        run: python src/main.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add public/ _data/ _posts/ assets/ || true
+          git diff --staged --quiet || git commit -m "auto: AI news update $(date +%Y-%m-%d)"
+          git push
 
       - name: Upload execution logs
         if: always()
