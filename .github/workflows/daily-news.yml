@@ -32,6 +32,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
           GITHUB_REPO: stevenbocheng/AI-NEWS-Teams
         run: python src/main.py
 
