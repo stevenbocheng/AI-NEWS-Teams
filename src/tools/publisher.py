@@ -232,6 +232,7 @@ def publisher_node(state: NewsState) -> NewsState:
             repo.index.commit(commit_message)
 
             origin = repo.remote("origin")
+            origin.set_url(repo_url)
             origin.push()
             logger.success(f"文章已成功發佈：{filename}")
 
