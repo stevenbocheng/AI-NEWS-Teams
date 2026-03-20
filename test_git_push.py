@@ -53,7 +53,7 @@ try:
     print("4. Push ...")
     push_env = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_ASKPASS": "echo"}
     result = subprocess.run(
-        ["git", "-C", tmp_dir, "push", clean_url, "HEAD:main"],
+        ["git", "-C", tmp_dir, "push", repo_url, "HEAD:main"],
         env=push_env, capture_output=True, text=True
     )
     if result.returncode != 0:
@@ -67,7 +67,7 @@ try:
     repo.index.remove([test_file])
     repo.index.commit("test: cleanup test file")
     result2 = subprocess.run(
-        ["git", "-C", tmp_dir, "push", clean_url, "HEAD:main"],
+        ["git", "-C", tmp_dir, "push", repo_url, "HEAD:main"],
         env=push_env, capture_output=True, text=True
     )
     if result2.returncode == 0:
