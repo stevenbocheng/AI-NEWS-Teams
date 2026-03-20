@@ -156,11 +156,16 @@ def publisher_node(state: NewsState) -> NewsState:
             logger.info(f"正在 clone {settings.GITHUB_REPO}...")
             repo = git.Repo.clone_from(repo_url, tmp_dir)
 
-            # 設定 git user（CI 環境無全域設定）並停用互動式密碼輸入
+            # 設定 git user 與認證（CI 環境必須明確設定）
             with repo.config_writer() as cw:
                 cw.set_value("user", "name", "GitHub Actions Bot")
                 cw.set_value("user", "email", "actions@github.com")
                 cw.set_value("credential", "helper", "")
+            # 用 extraheader 傳遞 token（GitHub Actions 官方做法，避免 credential helper 攔截）
+            repo.git.config(
+                "http.https://github.com/.extraheader",
+                f"AUTHORIZATION: bearer {settings.GITHUB_TOKEN}"
+            )
 
             # ── 重複發佈偵測 ──────────────────────────────
             published_log = _load_published_log(tmp_dir)
@@ -237,8 +242,9 @@ def publisher_node(state: NewsState) -> NewsState:
             commit_message = f"Auto-publish: {datetime.now().strftime('%Y-%m-%d')} AI News"
             repo.index.commit(commit_message)
 
+            clean_url = f"https://github.com/{settings.GITHUB_REPO}.git"
             with repo.git.custom_environment(GIT_TERMINAL_PROMPT="0"):
-                repo.git.push(repo_url, "HEAD:main")
+                repo.git.push(clean_url, "HEAD:main")
             logger.success(f"文章已成功發佈：{filename}")
 
             # ── 寫入本地（供 npm run dev 開發預覽）──────────
