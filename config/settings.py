@@ -19,7 +19,7 @@ class Settings:
     SEARCH_MAX_RESULTS: int = int(os.getenv("SEARCH_MAX_RESULTS", "5"))
 
     # GitHub
-    GITHUB_TOKEN: str = os.getenv("GH_TOKEN", "")
+    GITHUB_TOKEN: str = os.getenv("PUBLISH_TOKEN", "")
     GITHUB_REPO: str = os.getenv("GITHUB_REPO", "")
     GITHUB_POSTS_PATH: str = os.getenv("GITHUB_POSTS_PATH", "_posts")
 
@@ -47,7 +47,7 @@ class Settings:
         required = {
             "OPENAI_API_KEY": self.OPENAI_API_KEY,
             "TAVILY_API_KEY": self.TAVILY_API_KEY,
-            "GH_TOKEN": self.GITHUB_TOKEN,
+            "PUBLISH_TOKEN": self.GITHUB_TOKEN,
             "GITHUB_REPO": self.GITHUB_REPO,
         }
         missing = [k for k, v in required.items() if not v]
