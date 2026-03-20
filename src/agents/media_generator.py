@@ -17,7 +17,7 @@ IMAGE_MODELS = [
     "stabilityai/stable-diffusion-xl-base-1.0",  # 備選模型
 ]
 VIDEO_BASE_MODEL = "black-forest-labs/FLUX.1-schnell"
-VIDEO_MODEL = "Wan-AI/Wan2.2-I2V-A14B"
+VIDEO_MODEL = "stabilityai/stable-video-diffusion-img2vid-xt"
 
 
 def _get_client():
@@ -65,10 +65,9 @@ def _generate_video(client, video_prompt: str, path: str) -> bool:
         base_image.save(img_bytes, format="PNG")
         img_bytes.seek(0)
 
-        # Step 2：image → video
+        # Step 2：image → video（SVD 不支援 text prompt，純圖片驅動）
         video_bytes = client.image_to_video(
             img_bytes.read(),
-            prompt=video_prompt,
             model=VIDEO_MODEL,
         )
         os.makedirs(os.path.dirname(path), exist_ok=True)

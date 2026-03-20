@@ -50,7 +50,6 @@ def media_reviewer_node(state: NewsState) -> NewsState:
     """
     image_candidates = list(state.get("image_candidates", []))
     video_candidates = list(state.get("video_candidates", []))
-    media_decision = state.get("media_decision", {})
     metadata = state.get("metadata", {})
 
     # 若無任何候選，直接跳過
@@ -67,7 +66,7 @@ def media_reviewer_node(state: NewsState) -> NewsState:
     tags = metadata.get("tags", [])
 
     llm = ChatOpenAI(
-        model=settings.OPENAI_MODEL,
+        model=settings.OPENAI_CHEAP_MODEL,
         api_key=settings.OPENAI_API_KEY,
         temperature=0.1,
     )

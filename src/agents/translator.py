@@ -112,9 +112,9 @@ def translator_node(state: NewsState) -> NewsState:
         return state  # 所有新聞已是繁體中文，直接跳過
 
     llm = ChatOpenAI(
-        model=settings.OPENAI_MODEL,
+        model=settings.OPENAI_CHEAP_MODEL,
         api_key=settings.OPENAI_API_KEY,
-        temperature=0.1  # 翻譯要忠實，低 temperature
+        temperature=0.1
     )
 
     response = llm.invoke([

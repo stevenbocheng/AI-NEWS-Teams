@@ -11,6 +11,8 @@ class Settings:
     # LLM
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
     OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o")
+    # 低成本任務用 mini（翻譯、humanize、edit、審核、媒體審核）
+    OPENAI_CHEAP_MODEL: str = os.getenv("OPENAI_CHEAP_MODEL", "gpt-4o-mini")
 
     # Search
     TAVILY_API_KEY: str = os.getenv("TAVILY_API_KEY", "")
@@ -35,8 +37,10 @@ class Settings:
     PERSONAL_SITE_PUBLIC_DIR: str = os.getenv("PERSONAL_SITE_PUBLIC_DIR", "")
 
     # Quality Control
-    MIN_QUALITY_SCORE: float = float(os.getenv("MIN_QUALITY_SCORE", "7.0"))
+    MIN_QUALITY_SCORE: float = float(os.getenv("MIN_QUALITY_SCORE", "6.0"))
     MAX_REVISION_COUNT: int = int(os.getenv("MAX_REVISION_COUNT", "2"))
+    # 每次執行最多發佈篇數（預設 3，省 token；最多 5）
+    MAX_ARTICLES_PER_RUN: int = int(os.getenv("MAX_ARTICLES_PER_RUN", "3"))
 
     def validate(self):
         """啟動時驗證必要設定"""

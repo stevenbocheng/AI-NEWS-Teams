@@ -22,7 +22,7 @@ from config.settings import settings
 
 PUBLISHED_LOG_PATH = "_data/published_log.json"
 PERSONAL_FEED_FILENAME = "ai-news.json"
-PERSONAL_FEED_MAX_ARTICLES = 6
+PERSONAL_FEED_MAX_ARTICLES = 30
 GITHUB_SITE_BASE = "https://stevenbocheng.github.io"
 
 
@@ -116,13 +116,13 @@ def _save_published_log(repo_dir: str, published_log: list[dict]) -> None:
 
 def _copy_media(local_media_path: str, repo_dir: str, assets_subdir: str) -> str:
     """
-    複製媒體檔案到 repo 的 assets 目錄
-    回傳 Jekyll 可用的相對路徑（如 /assets/images/xxx.png），失敗回傳空字串
+    複製媒體檔案到 repo 的 public/assets 目錄（Vite 部署從 public/ 服務靜態檔案）
+    回傳相對路徑（如 /assets/images/xxx.png），失敗回傳空字串
     """
     if not local_media_path or not os.path.exists(local_media_path):
         return ""
     filename = os.path.basename(local_media_path)
-    dest_dir = os.path.join(repo_dir, "assets", assets_subdir)
+    dest_dir = os.path.join(repo_dir, "public", "assets", assets_subdir)
     os.makedirs(dest_dir, exist_ok=True)
     dest_path = os.path.join(dest_dir, filename)
     shutil.copy2(local_media_path, dest_path)
@@ -171,12 +171,12 @@ def publisher_node(state: NewsState) -> NewsState:
             jekyll_video_path = _copy_media(local_video_path, tmp_dir, "videos")
 
             if jekyll_image_path:
-                img_dest = os.path.join(tmp_dir, "assets", "images", os.path.basename(local_image_path))
+                img_dest = os.path.join(tmp_dir, "public", "assets", "images", os.path.basename(local_image_path))
                 files_to_commit.append(img_dest)
                 logger.info(f"圖片已複製：{jekyll_image_path}")
 
             if jekyll_video_path:
-                vid_dest = os.path.join(tmp_dir, "assets", "videos", os.path.basename(local_video_path))
+                vid_dest = os.path.join(tmp_dir, "public", "assets", "videos", os.path.basename(local_video_path))
                 files_to_commit.append(vid_dest)
                 logger.info(f"影片已複製：{jekyll_video_path}")
 
@@ -249,4 +249,8 @@ def publisher_node(state: NewsState) -> NewsState:
             except Exception as cleanup_err:
                 logger.warning(f"臨時目錄清理失敗（不影響發佈）：{cleanup_err}")
 
-        return {**state, "published_filename": filename, 
+        return {**state, "published_filename": filename, "error": ""}
+
+    except Exception as e:
+        logger.error(f"發佈失敗：{e}")
+        return {**state, "published_filename": "", "error": str(e)}

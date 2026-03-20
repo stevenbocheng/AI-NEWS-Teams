@@ -124,5 +124,55 @@ def build_workflow():
     return graph.compile()
 
 
+def build_article_workflow():
+    """子工作流：跳過 Researcher，從 Translator 開始（用於多篇逐一發佈）"""
+    from src.agents.translator import translator_node
+    from src.agents.deep_researcher import deep_researcher_node
+    from src.agents.writer import writer_node
+    from src.agents.manager import manager_node
+    from src.agents.media_generator import media_generator_node
+    from src.agents.media_reviewer import media_reviewer_node
+    from src.tools.publisher import publisher_node
+
+    graph = StateGraph(NewsState)
+
+    graph.add_node("translator", translator_node)
+    graph.add_node("deep_researcher", deep_researcher_node)
+    graph.add_node("writer", writer_node)
+    graph.add_node("manager", manager_node)
+    graph.add_node("media_generator", media_generator_node)
+    graph.add_node("media_reviewer", media_reviewer_node)
+    graph.add_node("publisher", publisher_node)
+
+    graph.set_entry_point("translator")
+    graph.add_edge("translator", "deep_researcher")
+    graph.add_edge("deep_researcher", "writer")
+    graph.add_edge("writer", "manager")
+    graph.add_edge("media_generator", "media_reviewer")
+
+    graph.add_conditional_edges(
+        "manager",
+        should_revise,
+        {
+            "writer": "writer",
+            "media_generator": "media_generator",
+            END: END,
+        }
+    )
+
+    graph.add_conditional_edges(
+        "media_reviewer",
+        should_regenerate_media,
+        {
+            "media_generator": "media_generator",
+            "publisher": "publisher",
+        }
+    )
+
+    graph.add_edge("publisher", END)
+
+    return graph.compile()
+
+
 # 建立工作流實例
 workflow = build_workflow()

@@ -185,7 +185,8 @@ def _search_sub_question(sq: dict) -> tuple[str, list[dict]]:
     results_parts = []
     source_list = []
 
-    for query in [sq.get("search_query_en", ""), sq.get("search_query_zh", "")]:
+    # 只用英文查詢（品質較高且避免重複，節省 Tavily 用量）
+    for query in [sq.get("search_query_en", "")]:
         if not query:
             continue
         try:
@@ -268,11 +269,11 @@ def deep_researcher_node(state: NewsState) -> NewsState:
     plan = _plan_sub_questions(llm, raw_news)
     sub_questions = plan.get("sub_questions", [])
 
-    # Step 2：每個子問題獨立搜尋（最多 4 個，控制成本）
+    # Step 2：每個子問題獨立搜尋（最多 3 個，控制成本）
     search_result_texts = []
     all_sources: list[dict] = []
 
-    for sq in sub_questions[:4]:
+    for sq in sub_questions[:3]:
         result_text, source_list = _search_sub_question(sq)
         search_result_texts.append(result_text)
         all_sources.extend(source_list)
