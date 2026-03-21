@@ -163,7 +163,7 @@ graph.add_conditional_edges("media_reviewer", should_regenerate_media,
     {"media_generator": "media_generator", "publisher": "publisher"})
 ```
 
-所有 Agent 共享同一個 `NewsState` TypedDict（27 個欄位），每個 Agent **只讀取需要的欄位、只寫入負責的欄位**，完全解耦，任一節點可獨立替換。
+所有 Agent 共享同一個 `NewsState` TypedDict（15 個欄位），每個 Agent **只讀取需要的欄位、只寫入負責的欄位**，完全解耦，任一節點可獨立替換。
 
 ### 智慧成本控制
 
@@ -304,17 +304,24 @@ python src/main.py
 
 ## 精選專案摘要（個人網站用）
 
-> 8 個 AI 代理協作，每日自動收集、深度研究、撰寫並發布繁體中文科技新聞。
-> 使用 LangGraph 設計條件路由，低分文章自動退稿重寫；
-> 寫作流程整合三個 Prompt 角色去除 AI 痕跡；
-> 串接 Tavily、HuggingFace、OpenAI 與 GitHub Actions 全程零人工介入。
+### 中文版
+
+8 個 AI 代理以 LangGraph StateGraph 串接，每日台灣時間 08:00 由 GitHub Actions 自動觸發，執行從新聞蒐集到發布的完整流水線，無需人工介入。
+
+**設計亮點：**
+
+- **條件路由**：Manager Agent 以 5 個維度（內容品質、語言品質、格式、標題、人味）對草稿評分，低於 6.0 分退回 Writer 重寫，最多退稿 2 次後強制繼續，防止無限迴圈。
+- **三角色寫作流程**：Writer 依序執行 article-writing（事實開場、禁用炒作詞）、humanizer-zh-tw（去除 24 種 AI 寫作模式）、editor（主動語態、精簡冗詞）三個 Prompt 角色，均基於開源框架針對台灣繁體中文場景重新調整。
+- **共享狀態設計**：15 個欄位的 `NewsState` TypedDict 跨所有 Agent 共用，每個 Agent 只讀寫自己負責的欄位，任一節點可獨立替換不影響其他部分。
+- **雙模型成本控制**：GPT-4o 負責創意寫作與深度分析，GPT-4o-mini 負責翻譯、評分、校對等重複性任務，每次最多發布 3 篇。
+- **優雅降級**：HuggingFace Token 未設定時自動跳過媒體生成，系統正常運行不崩潰。
 
 ### 英文版（Resume / Portfolio）
 
 **AI News Automation System** · Python · LangGraph · OpenAI · Tavily · HuggingFace · GitHub Actions
 
-**System Design**: 8 AI Agents run a daily news pipeline — sourcing, translating, fact-checking, writing, reviewing, publishing — without anyone touching it. LangGraph handles the execution order. Low-scoring articles get sent back to the Writer for a rewrite, up to twice.
+**System Design**: 8 AI Agents run a daily news pipeline — sourcing, translating, fact-checking, writing, reviewing, publishing — without anyone touching it. LangGraph handles the execution order with a shared `NewsState` TypedDict (15 fields). Low-scoring articles get sent back to the Writer for a rewrite, up to twice.
 
-**Writing Quality Control**: Every article passes through three AI roles in order: write the draft, remove AI-sounding language, tighten the prose. A Manager Agent then scores it across 5 dimensions. Below the threshold, it doesn't publish. Role behavior is adapted from open-source prompt frameworks, adjusted for Traditional Chinese.
+**Writing Quality Control**: Every article passes through three AI roles in sequence: write the draft, strip AI-sounding language (24 detected patterns), tighten the prose. A Manager Agent then scores across 5 dimensions. Below 6.0, it doesn't publish. Role behavior is adapted from open-source prompt frameworks, adjusted for Traditional Chinese.
 
-**Tool Integration**: Connected 4 services: Tavily (web search), HuggingFace (cover images and clips), OpenAI, and GitHub Actions for daily scheduling. Writing uses GPT-4o, review uses GPT-4o-mini.
+**Tool Integration**: Connected 4 services: Tavily (web search), HuggingFace (cover images and clips), OpenAI, and GitHub Actions for daily scheduling. Writing uses GPT-4o, review uses GPT-4o-mini. Media generation is skipped gracefully when the HuggingFace token is absent.

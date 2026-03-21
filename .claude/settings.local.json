@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://raw.githubusercontent.com/stevenbocheng/AI-NEWS-Teams/main/public/ai-news.json\")"
+    ]
+  }
+}
