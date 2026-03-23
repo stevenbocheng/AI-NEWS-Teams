@@ -19,6 +19,8 @@ PUBLISHED_LOG_PATH = "_data/published_log.json"
 PERSONAL_FEED_FILENAME = "ai-news.json"
 PERSONAL_FEED_MAX_ARTICLES = 30
 GITHUB_SITE_BASE = "https://stevenbocheng.github.io"
+# 圖片/影片存在 AI-NEWS-Teams repo 的 public/assets/，用 raw URL 存取
+GITHUB_RAW_BASE = "https://raw.githubusercontent.com/stevenbocheng/AI-NEWS-Teams/main/public"
 
 # Repo 根目錄（Actions 環境下 = 工作目錄；本地開發下 = 專案根目錄）
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -39,9 +41,9 @@ def _build_feed_json(published_log: list[dict]) -> dict:
             if len(parts) == 3:
                 url = f"{GITHUB_SITE_BASE}/{parts[0]}/{parts[1]}/{parts[2]}/{slug}/"
 
-        image_url = f"{GITHUB_SITE_BASE}{image_path}" if image_path else ""
+        image_url = f"{GITHUB_RAW_BASE}{image_path}" if image_path else ""
         video_path = entry.get("video", "")
-        video_url = f"{GITHUB_SITE_BASE}{video_path}" if video_path else ""
+        video_url = f"{GITHUB_RAW_BASE}{video_path}" if video_path else ""
 
         articles.append({
             "title": entry.get("title", ""),
