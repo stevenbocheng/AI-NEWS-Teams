@@ -88,9 +88,18 @@ def _load_published_log(repo_dir: str) -> list[dict]:
         return []
 
 
-def _is_duplicate(published_log: list[dict], source_urls: list[str]) -> bool:
+def _is_duplicate(published_log: list[dict], source_urls: list[str], new_title: str = "") -> bool:
+    # URL 精確比對（原有邏輯）
     logged_urls = {url for entry in published_log for url in entry.get("source_urls", [])}
-    return any(url in logged_urls for url in source_urls if url)
+    if any(url in logged_urls for url in source_urls if url):
+        return True
+    # 標題前 15 字比對（防止同主題不同 URL 的重複發布）
+    if new_title:
+        title_key = new_title[:15]
+        logged_title_keys = {entry.get("title", "")[:15] for entry in published_log}
+        if title_key in logged_title_keys:
+            return True
+    return False
 
 
 def _save_published_log(repo_dir: str, published_log: list[dict]) -> None:
@@ -132,7 +141,7 @@ def publisher_node(state: NewsState) -> NewsState:
         published_log = _load_published_log(repo_dir)
         source_urls = [item.get("url", "") for item in raw_news if item.get("url")]
 
-        if _is_duplicate(published_log, source_urls):
+        if _is_duplicate(published_log, source_urls, metadata.get("title", "")):
             logger.warning("偵測到重複新聞，跳過本次發佈")
             return {**state, "published_filename": "", "error": ""}
 

@@ -11,5 +11,6 @@ search_tool = TavilySearchResults(
     include_answer=True,             # 包含 AI 整合的摘要回答
     include_raw_content=False,       # 不包含完整原始 HTML（節省 Token）
     include_images=False,
+    days=1,                          # 只搜過去 24 小時的新聞
     api_key=settings.TAVILY_API_KEY
 )
