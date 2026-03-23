@@ -51,6 +51,11 @@
       "sourceType": "github",
       "computedHash": "89391378b3cec71fca5ee48551ecc1acff0fbb017db128d1460438c69147c1a7"
     },
+    "nano-banana-pro-prompts-recommend-skill": {
+      "source": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+      "sourceType": "github",
+      "computedHash": "0fd4fb5cd137d97d9780d585a3f9d2e8701bb783897b376e3eabf4db6d57d0aa"
+    },
     "nemo-curator": {
       "source": "Orchestra-Research/AI-Research-SKILLs",
       "sourceType": "github",

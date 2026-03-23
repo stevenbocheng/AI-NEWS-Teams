@@ -25,3 +25,10 @@ Thumbs.db
 .coverage
 htmlcov/
 .pytest_cache/
+
+# Skills prompt 庫（動態下載，勿 commit）
+.agents/skills/nano-banana-pro-prompts-recommend-skill/references/
+.claude/skills/nano-banana-pro-prompts-recommend-skill/
+
+# 錯誤建立的家目錄
+~/
