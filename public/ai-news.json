@@ -1,13 +1,32 @@
 {
-  "updated": "2026-03-23T01:53:01",
+  "updated": "2026-03-24T01:29:10",
   "articles": [
+    {
+      "title": "Helion 與 OpenAI 的電力交易：融合能源市場的新勢力",
+      "description": "Helion 與 OpenAI 正在洽談電力交易，Helion 將出售其 12.5% 的電力產出給 OpenAI。這項計畫尚未商業化，但其潛力可能影響能源市場，特別是對台灣的能源供應。",
+      "date": "2026-03-24",
+      "slug": "helion-openai-electricity-trade-new-force-in-energy-market",
+      "url": "https://stevenbocheng.github.io/2026/03/24/helion-openai-electricity-trade-new-force-in-energy-market/",
+      "image": "https://raw.githubusercontent.com/stevenbocheng/AI-NEWS-Teams/main/public/assets/images/helion-openai-electricity-trade-new-force-in-energy-market_v1.png",
+      "video": "",
+      "categories": [
+        "AI",
+        "科技新聞"
+      ],
+      "tags": [
+        "Helion",
+        "OpenAI",
+        "融合能源"
+      ],
+      "body": "# Helion 與 OpenAI 的電力交易：融合能源市場的新勢力\n\nHelion 和 OpenAI 正在洽談一項電力交易，Helion 將出售其 12.5% 的電力產出給 OpenAI。這項計畫尚未商業化，但已引起市場關注。Helion 採用氘和氦-3 的燃料技術，具備高效能潛力，可能影響 OpenAI 的運營成本和能源來源。\n\n## 重點整理\n- Helion 使用氘和氦-3 作為燃料，採用脈衝方法直接提取電力，避免傳統蒸汽渦輪機過程。\n- OpenAI 計劃到 2030 年獲得 5 吉瓦電力，2035 年擴展至 50 吉瓦。\n- Helion 面臨來自 Commonwealth Fusion Systems 等公司的競爭。\n- Helion 技術尚未證明商業可行性，面臨技術挑戰和資金限制。\n- Helion 的技術創新可能為台灣能源供應提供新選擇。\n\n## 技術細節\nHelion 的技術基於氘和氦-3 燃料，利用磁場逆轉配置（FRC）技術約束等離子體，並在超過 1 億攝氏度的高溫下進行融合反應。這種方法不依賴傳統蒸汽渦輪機，而是直接從等離子體中採集電力，提高能效。Helion 的技術引起廣泛關注，儘管目前尚未商業化，但其潛力不容忽視。\n\n## 產業與市場影響\n如果 Helion 的技術成功商業化，將對能源市場產生影響。OpenAI 的合作計畫表明，科技巨頭對降低運營成本和增加能源來源多樣性有強烈需求。這樣的合作可能引發其他科技公司效仿，推動融合能源的普及。\n\n## 不同聲音\n儘管 Helion 的技術創新令人期待，但其商業化進程仍面臨挑戰。批評者指出，技術的商業可行性尚未得到驗證，並可能受到技術挑戰和資金限制的影響。因此，這項技術能否迅速進入市場仍存在不確定性。\n\n## 對台灣的意義\n對台灣而言，Helion 的技術可能為能源供應提供新選項，尤其是在推動可再生能源和減少碳排放方面。台灣的政策制定者可以考慮支持類似的技術創新，以促進能源多樣化和可持續發展。這可能為台灣科技業帶來新機會，提升國際競爭力。\n\n## 參考來源\n1. Helion's fusion system is (basically) an RLC circuit — https://www.helionenergy.com/articles/helions-fusion-system-is-basically-an-rlc-circuit/\n2. FAQ - Helion — https://www.helionenergy.com/faq/\n3. Technology - Helion — https://www.helionenergy.com/technology/\n4. OpenAI in Talks With Helion to Secure Fusion Energy — https://www.powermag.com/openai-in-talks-with-helion-to-secure-fusion-energy/\n5. Report: Helion is working on a massive fusion power deal with OpenAI — https://www.geekwire.com/2026/report-helion-is-working-on-a-massive-fusion-power-deal-with-openai/\n6. OpenAI is in talks to buy fusion energy from Helion - TNW — https://thenextweb.com/news/openai-is-in-talks-to-buy-fusion-energy-from-helion\n7. Top Helion Energy Alternatives, Competitors — https://www.cbinsights.com/company/helion-energy/alternatives-competitors\n8. Sam Altman's fusion startup Helion Energy hits 150 million degree ... — https://fortune.com/2026/02/13/sam-altman-fusion-helion-energy-milestone-doubters-grid-power-2028/\n9. Top Helion Alternatives, Competitors - CB Insights — https://www.cbinsights.com/company/helion-1/alternatives-competitors"
+    },
     {
       "title": "Amazon Trainium晶片的技術優勢與市場挑戰",
       "description": "本文探討 Amazon 的 Trainium 晶片在 AI 硬體市場中的技術優勢與市場挑戰，分析其市場份額及對台灣科技業的影響。",
       "date": "2026-03-23",
       "slug": "amazon-trainium-chip-technical-advantages-and-market-challenges",
       "url": "https://stevenbocheng.github.io/2026/03/23/amazon-trainium-chip-technical-advantages-and-market-challenges/",
-      "image": "https://stevenbocheng.github.io/assets/images/amazon-trainium-chip-technical-advantages-and-market-challenges_v1.png",
+      "image": "https://raw.githubusercontent.com/stevenbocheng/AI-NEWS-Teams/main/public/assets/images/amazon-trainium-chip-technical-advantages-and-market-challenges_v1.png",
       "video": "",
       "categories": [
         "AI",
@@ -25,7 +44,7 @@
       "date": "2026-03-21",
       "slug": "railway-secures-100-million-to-challenge-aws-ai-native-cloud",
       "url": "https://stevenbocheng.github.io/2026/03/21/railway-secures-100-million-to-challenge-aws-ai-native-cloud/",
-      "image": "https://stevenbocheng.github.io/assets/images/railway-secures-100-million-to-challenge-aws-ai-native-cloud_v1.png",
+      "image": "https://raw.githubusercontent.com/stevenbocheng/AI-NEWS-Teams/main/public/assets/images/railway-secures-100-million-to-challenge-aws-ai-native-cloud_v1.png",
       "video": "",
       "categories": [
         "AI",
@@ -44,7 +63,7 @@
       "date": "2026-03-21",
       "slug": "openai-fully-automated-researcher-technical-and-market-challenges",
       "url": "https://stevenbocheng.github.io/2026/03/21/openai-fully-automated-researcher-technical-and-market-challenges/",
-      "image": "https://stevenbocheng.github.io/assets/images/openai-fully-automated-researcher-technical-and-market-challenges_v1.png",
+      "image": "https://raw.githubusercontent.com/stevenbocheng/AI-NEWS-Teams/main/public/assets/images/openai-fully-automated-researcher-technical-and-market-challenges_v1.png",
       "video": "",
       "categories": [
         "AI",
