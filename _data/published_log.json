@@ -616,5 +616,71 @@
     "filename": "2026-04-06-microsoft-copilot-entertainment-use-only-market-trust-challenges.md",
     "image": "/assets/images/microsoft-copilot-entertainment-use-only-market-trust-challenges_v1.png",
     "video": ""
+  },
+  {
+    "date": "2026-04-07",
+    "slug": "zero-shot-fund-ai-investment-market-new-driving-force",
+    "title": "Zero Shot 基金：AI 投資市場的新動力",
+    "description": "Zero Shot 基金由多位 OpenAI 前員工創立，目標籌集 1 億美元，專注於早期 AI 初創公司的投資。該基金的成立可能改變 AI 風險投資市場的格局，並為台灣科技業帶來新的合作機會。",
+    "categories": [
+      "AI",
+      "科技新聞"
+    ],
+    "tags": [
+      "Zero Shot 基金",
+      "AI 投資",
+      "OpenAI"
+    ],
+    "body": "# Zero Shot 基金：AI 投資市場的新動力\n\nZero Shot 基金由多位 OpenAI 前員工創立，目標籌集 1 億美元，並已開始投資早期 AI 初創公司。該基金已向企業自動化平台 Worktrace AI 和 AI 增強型工廠機器人公司 Foundry Robotics 投資，還有一個未公開的初創公司。這些舉措顯示該基金在技術驅動的投資策略上的決心，可能對 AI 風險投資市場產生影響。\n\n## 重點整理\n- Zero Shot 基金已向 Worktrace AI 和 Foundry Robotics 投資，還有一個未公開的初創公司。\n- 目標籌集 1 億美元，專注於 AI 技術驅動的投資策略。\n- 創始團隊的技術背景為其在技術盡職調查上提供優勢。\n- 可能導致 AI 風險投資市場競爭加劇，特別是與傳統風投公司的競爭。\n- 台灣的初創公司可能會有新的合作機會，特別是在 AI 應用和創新方面。\n\n## 技術細節\nZero Shot 基金的創始團隊由多位 OpenAI 前員工組成，這些創始人擁有豐富的 AI 技術經驗。「Zero Shot」這個名稱來自 AI 訓練術語，表示該基金可能專注於無需大量資料訓練的 AI 技術創新。這種技術背景使 Zero Shot 基金在技術盡職調查和投資決策中具備獨特優勢，能快速識別和評估具有潛力的 AI 技術。\n\n## 產業與市場影響\nZero Shot 基金的成立可能改變 AI 風險投資市場格局。該基金的技術專業知識可能吸引更多有限合夥人，促使其他基金採取類似的技術驅動策略。傳統風投公司如 Andreessen Horowitz 和 Sequoia Capital 可能面臨來自這種新型基金的競爭壓力。AI 驅動的投資工具有望提高投資決策的效率和準確性，進一步改變市場動態。\n\n## 不同聲音\nZero Shot 基金的技術背景被視為其優勢之一，但其低調的運作策略也引發了一些批評。這種策略可能限制其市場知名度，影響吸引更多投資者的能力。此外，AI 技術的不斷演變和市場的不確定性也可能帶來潛在風險。批評者認為，基金的長期成功尚需觀察。\n\n## 對台灣的意義\n對台灣科技業來說，Zero Shot 基金的成立可能帶來新的合作機會，尤其是在 AI 技術的應用和創新領域。台灣的初創公司可考慮與該基金合作，獲得資金和技術支持，進一步加強台灣在 AI 產業中的競爭力。\n\n## 參考來源\n1. [OpenAI Alumni Launch $100M Zero Shot Fund](https://cryptorank.io/news/feed/1fa87-openai-alumni-zero-shot-fund)\n2. [Zero Shot closes $100 million first close and invests in early AI startups](https://mezha.net/eng/bukvy/zero_shot_closes/)\n3. [OpenAI Alumni Launch $100M VC Fund, Already Writing ...](https://www.techbuzz.ai/articles/openai-alumni-launch-100m-vc-fund-already-writing-checks)\n4. [OpenAI alums have been quietly investing from a new ... - TechCrunch](https://techcrunch.com/2026/04/06/openai-alums-have-been-quietly-investing-from-a-new-potentially-100m-fund/)\n5. [Understanding the Impact of AI on Venture Capital Investment ...](https://www.hustlefund.vc/post/angel-squad-imagine-stepping-into-a-world-where-venture-capital-meets-artificial-intelligence-at-a-crossroads-of-innovation-and-opportunity)",
+    "source_urls": [
+      "https://techcrunch.com/2026/04/06/openai-alums-have-been-quietly-investing-from-a-new-potentially-100m-fund/"
+    ],
+    "filename": "2026-04-07-zero-shot-fund-ai-investment-market-new-driving-force.md",
+    "image": "/assets/images/zero-shot-fund-ai-investment-market-new-driving-force_v1.png",
+    "video": ""
+  },
+  {
+    "date": "2026-04-07",
+    "slug": "google-launches-offline-ai-dictation-app",
+    "title": "Google 推出離線 AI 口述應用，挑戰市場格局",
+    "description": "Google 推出名為「Google AI Edge Eloquent」的離線口述應用，基於輕量級 Gemma AI 模型，挑戰市場格局，並可能促使台灣科技業加速開發類似應用。",
+    "categories": [
+      "AI",
+      "科技新聞"
+    ],
+    "tags": [
+      "Google",
+      "Gemma AI",
+      "語音識別"
+    ],
+    "body": "# Google 推出離線 AI 口述應用，挑戰市場格局\n\nGoogle 在週三推出了一款名為「Google AI Edge Eloquent」的口述應用程式，該應用程式能在 iOS 平台上離線運行，這是其主要技術突破之一。使用者即使在沒有網路連接的情況下，也能進行高效的語音識別和口述，這項技術基於輕量級的 Gemma AI 模型開發。\n\n## 重點整理\n- Google 的應用程式使用輕量級的 Gemma AI 模型，可在設備上離線運行 [1][2]。\n- 此應用程式挑戰了現有市場格局，特別是對 Wispr Flow 等競爭者 [3]。\n- 在離線運行方面，Google 的應用程式具有技術優勢，但功能和用戶體驗仍需進一步觀察 [6][7]。\n- 用戶隱私和資料安全問題可能成為用戶的擔憂。\n- 台灣科技業者可能需要加速開發類似應用以迎合市場需求。\n\n## 技術細節\nGoogle AI Edge Eloquent 的核心是輕量級的 Gemma AI 模型，這使得應用能在沒有網路連接的情況下進行語音識別。這一技術突破得益於模型的精簡化和高效能運算，使得在行動設備上運行成為可能。這也大幅降低了對網路的依賴，提升了使用的便捷性和穩定性 [1][2]。\n\n## 產業與市場影響\nGoogle 的這一舉動可能會對語音識別應用市場產生重大影響。選擇首先在 iOS 平台推出，可能是因為這一平台的用戶基數和市場競爭激烈程度高，使其成為理想的試驗場域。這將對 Wispr Flow 和其他競爭者構成壓力，迫使他們提升技術水平和服務質量，以維持市場份額 [3]。\n\n## 不同聲音\n儘管 Google 的應用在技術上具有優勢，但用戶隱私和資料安全問題引起了關注，特別是在應用離線運行時的資料處理方式上。離線功能的準確性和穩定性仍需進一步的用戶反饋來驗證，這也是許多用戶在考慮使用時的重要考量 [6][7]。\n\n## 對台灣的意義\n對於台灣的科技業來說，這款應用的推出可能促使本地企業加速開發離線 AI 應用，以滿足日益增長的市場需求。政府政策制定者也需要考慮如何支持本地企業在這一領域的創新，進而提升台灣在國際市場中的競爭力。\n\n## 參考來源\n[1] Google drops offline AI dictation app for iOS with Gemma — https://www.techbuzz.ai/articles/google-drops-offline-ai-dictation-app-for-ios-with-gemma  \n[2] Google quietly launched an AI dictation app that works offline — https://techcrunch.com/2026/04/06/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/  \n[3] Google quietly releases free offline AI dictation app for iPhone - TNW — https://thenextweb.com/news/google-offline-dictation-app-ios  \n[6] Wispr Flow vs Willow Voice: Which is the best dictation tool ... — https://wisprflow.ai/post/wispr-flow-vs-willow-voice  \n[7] AIDictation vs Wispr Flow: Which Fits Real Work Better in 2026? — https://aidictation.com/compare/vs-wispr-flow",
+    "source_urls": [
+      "https://techcrunch.com/2026/04/06/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/"
+    ],
+    "filename": "2026-04-07-google-launches-offline-ai-dictation-app.md",
+    "image": "/assets/images/google-launches-offline-ai-dictation-app_v1.png",
+    "video": ""
+  },
+  {
+    "date": "2026-04-07",
+    "slug": "openai-ai-economy-vision-public-wealth-fund-robot-tax",
+    "title": "OpenAI 提出人工智慧經濟新願景：公共財富基金與機器人稅",
+    "description": "OpenAI 在其最新技術報告中提出了對未來人工智慧經濟的願景，包括公共財富基金、機器人稅和四天工作制，旨在減少失業和不平等問題，並促進社會安全網的擴大。",
+    "categories": [
+      "AI",
+      "科技新聞"
+    ],
+    "tags": [
+      "人工智慧",
+      "公共財富基金",
+      "機器人稅"
+    ],
+    "body": "# OpenAI 提出人工智慧經濟新願景：公共財富基金與機器人稅\n\nOpenAI 最近發佈的一份技術報告中，闡述了其對未來人工智慧經濟的願景，包括公共財富基金、機器人稅和四天工作制。這些政策旨在減少失業和不平等問題，並促進社會安全網的擴大。儘管這些提議可能帶來社會經濟影響，但其實施面臨國際協作和政策調整的挑戰。\n\n## 重點整理\n- OpenAI 提議建立公共財富基金，讓公民自動持有 AI 公司的股份，並將收益直接分配給公民，以應對 AI 對市場的影響。\n- 機器人稅是對使用自動化技術取代人力的公司徵收的稅，旨在補充公共稅收並支持社會安全網。\n- 提議試行四天工作制，以應對 AI 導致的工作變遷和失業問題。\n- 這些政策的實施需要國際協作，否則可能導致技術公司轉移至稅收友好的地區。\n- 批評者指出，機器人稅可能會抑制技術創新和生產力增長。\n\n## 技術背景\nOpenAI 提出的政策包括公共財富基金和機器人稅。公共財富基金的概念是讓公民持有 AI 公司的股份，分享 AI 帶來的經濟利益，旨在減少因 AI 驅動的經濟變革而可能產生的不平等。機器人稅則是對使用自動化技術取代人力的公司徵稅，這些稅收將用於支持社會安全網和減少不平等。這一政策的目的是通過重新分配財富來緩解失業問題（TechCrunch）。\n\n## 產業與市場影響\n這些政策可能對全球經濟產生重大影響。公共財富基金和機器人稅可能改變資本分配方式，促進更公平的經濟增長。然而，這些政策的實施需要國際協作，否則可能導致技術公司轉移至稅收友好的地區，影響外國投資（Brookings）。如果能有效實施，這些政策可能為全球經濟帶來新的增長模式，並有助於減少由技術驅動的失業問題。\n\n## 不同聲音\n批評者指出，機器人稅可能抑制技術創新和生產力增長。公共財富基金的管理和分配也可能面臨挑戰。這些政策的成功實施需要精細的政策設計和國際協作（Brookings）。對於機器人稅的有效性和實施方式也存在分歧。一些觀點認為這可能抑制創新，而另一些則認為是必要的社會調節手段。\n\n## 對台灣的意義\n對台灣而言，這些政策可能影響科技產業的競爭力和勞動市場結構。台灣政府可能需要考慮如何在推動技術創新與維護社會公平之間取得平衡。具體來說，台灣可以考慮引入類似的稅收制度，以確保在技術創新與社會公平之間取得平衡。同時，也需要建立有效的社會安全網，以應對可能的失業問題。\n\n## 參考來源\n1. https://cryptorank.io/news/feed/c6971-openai-ai-economy-policy-proposals\n2. https://qz.com/openai-robot-taxes-public-wealth-fund-ai-jobs\n3. https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/\n4. https://www.brookings.edu/articles/navigating-the-future-of-work-a-case-for-a-robot-tax-in-the-age-of-ai/\n5. https://www.brookings.edu/articles/future-tax-policy-a-public-finance-framework-for-the-age-of-ai/\n6. https://pmc.ncbi.nlm.nih.gov/articles/PMC9193369/\n7. https://www.businessinsider.com/openai-superintelligence-ai-upheaval-tax-shorter-workweek-public-wealth-fund-2026-4",
+    "source_urls": [
+      "https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/"
+    ],
+    "filename": "2026-04-07-openai-ai-economy-vision-public-wealth-fund-robot-tax.md",
+    "image": "/assets/images/openai-ai-economy-vision-public-wealth-fund-robot-tax_v1.png",
+    "video": ""
   }
 ]
